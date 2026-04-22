@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connect | WRS Consulting, LLC</title>
+  <meta name="description" content="Contact and connect with WRS Consulting, LLC." />
+  <style>
+    :root {
+      --bg: #04070d;
+      --bg2: #0b1220;
+      --panel: rgba(255,255,255,0.05);
+      --border: rgba(255,255,255,0.10);
+      --text: #e5edf9;
+      --muted: #9aa8bf;
+      --white: #ffffff;
+      --accent: #b20d18;
+      --accent2: #ff4d5a;
+      --shadow: 0 18px 60px rgba(0,0,0,0.35);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(178,13,24,0.20), transparent 24%),
+        radial-gradient(circle at left center, rgba(255,77,90,0.10), transparent 18%),
+        linear-gradient(180deg, #03060d 0%, #07101d 100%);
+      display: grid;
+      place-items: center;
+      padding: 1.25rem;
+    }
+
+    .shell {
+      width: min(760px, 100%);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 32px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)),
+        linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .shell::before {
+      content: "";
+      position: absolute;
+      inset: auto -120px -120px auto;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(178,13,24,0.22), transparent 60%);
+      pointer-events: none;
+    }
+
+    .topbar {
+      height: 10px;
+      background: linear-gradient(90deg, var(--accent2), var(--accent));
+    }
+
+    .content {
+      padding: 2rem;
+      display: grid;
+      gap: 1.4rem;
+    }
+
+    .brand {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .logo-box {
+      width: 96px;
+      height: 96px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.76rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      font-weight: 800;
+      margin-bottom: 0.45rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.02;
+      color: var(--white);
+    }
+
+    .lead {
+      margin: 0.8rem 0 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+      max-width: 58ch;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      padding: 1.15rem;
+      border-radius: var(--radius);
+      background: var(--panel);
+      border: 1px solid var(--border);
+    }
+
+    .label {
+      color: var(--accent2);
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.45rem;
+    }
+
+    .value, .value a {
+      color: var(--white);
+      font-weight: 700;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-top: 0.25rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.95rem 1.2rem;
+      border-radius: 14px;
+      border: 1px solid transparent;
+      font-size: 0.95rem;
+      font-weight: 800;
+      text-decoration: none;
+      transition: 0.18s ease;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent2), var(--accent));
+      color: #fff;
+      box-shadow: 0 12px 36px rgba(178,13,24,0.28);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.03);
+      color: var(--white);
+      border-color: rgba(255,255,255,0.12);
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 0.92rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 1rem;
+    }
+
+    @media (max-width: 700px) {
+      .brand { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
+      .content { padding: 1.25rem; }
+      .logo-box { width: 84px; height: 84px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="topbar"></div>
+    <div class="content">
+      <section class="brand">
+        <div class="logo-box">
+          <img src="WRS%20Consulting%20Logo%20Red%20%28ChatGPT%20Image%20Mar%2014%2C%202026%2C%2009_44_17%20PM%29.png"
+               alt="WRS Consulting logo"
+               style="width:100%;height:100%;object-fit:cover;" />
+        </div>
+        <div>
+          <div class="eyebrow">WRS Consulting, LLC</div>
+          <h1>Connect with Wes Schapper</h1>
+          <p class="lead">Practical support and security training for small businesses, startups, and growing teams.</p>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="card">
+          <div class="label">Email</div>
+          <div class="value"><a href="mailto:wes@wrsconsultingllc.com">wes@wrsconsultingllc.com</a></div>
+        </div>
+        <div class="card">
+          <div class="label">Website</div>
+          <div class="value"><a href="https://wrsconsultingllc.com/">wrsconsultingllc.com</a></div>
+        </div>
+        <div class="card">
+          <div class="label">Company</div>
+          <div class="value">WRS Consulting, LLC</div>
+        </div>
+        <div class="card">
+          <div class="label">Focus</div>
+          <div class="value">Technical Support • Staff Training • Network & Cybersecurity Consulting</div>
+        </div>
+      </section>
+
+      <section class="actions">
+        <a class="btn btn-primary" href="mailto:wes@wrsconsultingllc.com">Email Wes</a>
+        <a class="btn btn-secondary" href="https://wrsconsultingllc.com/">Visit Website</a>
+        <a class="btn btn-secondary" href="Wes_Schapper_WRS_Consulting.vcf" download>Save Contact</a>
+      </section>
+
+      <div class="note">
+        Download the contact card to save Wes Schapper and WRS Consulting, LLC directly to your phone or address book.
+      </div>
+    </div>
+  </main>
+</body>
+</html>
